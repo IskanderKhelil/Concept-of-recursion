@@ -1,0 +1,15 @@
+Function Palindrome (Word: STRING, i: INTEGER, n: INTEGER): BOOLEAN
+BEGIN
+//i: First character
+//n: String length
+if (i==n) 
+THEN return (TRUE);
+
+ELSE
+    IF (Word[i] != Word[n]) THEN
+        return (FALSE);
+    ELSE
+        return Palindrome (Word, i+1, n-1)
+END_IF
+
+END
